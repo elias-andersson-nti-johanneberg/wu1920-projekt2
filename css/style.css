@@ -1,6 +1,9 @@
 body {
     background-color: aliceblue;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 #overlay {
     position: fixed; /* Sit on top of the page content */
@@ -49,7 +52,78 @@ body {
 
 @media screen and (min-width: 992px) {
     body {
-        background-color: pink;
+        background-color:#373737;
+        margin: 0;
+        max-width: 100%;
+    }
+    
+    .gridwrapper {
+      display: grid;
+      grid-template-areas: 
+      "he"
+      "ph"
+      "ph"
+      "ph"
+      "ph"
+      "ph"
+      "ph"
+      ;
+      grid-template-columns: 100vw;
+      grid-template-rows: repeat(7, 40vh);
+      grid-gap: 1vh;
+      margin: 0;
+    }
+    
+    header{
+      background: linear-gradient( -45deg,#1082d0,#239ef0,#df8124, #b86511);
+      background-size: 150%;
+      animation: change 8s ease-in-out infinite;
+      margin: 15px;
+      display: flex;
+      }
+
+    @keyframes change {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+
+    #logo{
+      flex: 1;
+    }
+
+    header #name {
+      flex: 2; 
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+    }
+
+    #name h2{
+      text-shadow: 3px 6px black;
+      font-family: 'Bebas Neue', cursive;
+      color: orange;
+      font-size: 9em;
+      margin: 0%;
+      align-self: center;
+      justify-self: center;
+     
+    }
+
+    #name p{
+      align-self: center;
+      margin: 0.5em;
+      background-color: orange;
+      font-family: ;
+    }
+
+    header nav {
+      flex: 1;
     }
 
 }
+
+  *{
+  box-sizing: border-box; 
+  }
