@@ -13,12 +13,12 @@
     <div class="gridwrapper"> 
         <div id="overlay" >
             <video autoplay muted loop id="myvideo">
-            <source src="/misc/TRY NOT TO DIE - S19 Collection.mp4" type="video/mp4">  </source>
+            <source src="misc/TRY NOT TO DIE - S19 Collection.mp4" type="video/mp4">  </source>
             </video> 
             <div>
                 <h1>Zpetso </h1>
                 <h2> Photographer // Videographer // Freerunner // Creative</h2>
-                <button onclick="overlayoff()"> </button>
+                <button onclick="overlayoff(), bringToFront()"> </button>
             </div>
         </div>
 
@@ -30,29 +30,70 @@
                 <p>Photographer // Videographer // Freerunner // Creative</h4>
             </div>
             <nav> 
-                <a href="index.html">Home</a>
-                <a href="sdankkld.html">Videos</a>
-                <a href="sdmadlma.html">Creative</a>
-                <a href="fmskafm.html">About me</a>
+                <a class="visited" href="index.html">Home</a>
+                <a href="#videos_page">Videos</a>
+                <a href="#creative_page">Creative</a>
+                <a class="visited" href="fmskafm.html">About me</a>
                 
             </nav>
         </header>
       
-        <section> 
-            <h2 >PHOTOGRAPHS</h2>
-            <div class="photo"> 
-            <img class="portrait" src="/img/elias.jpg" alt="" >
-            <img class="portrait" src="/img/ninsu_math.jpg" alt="">
-            <img class="portrait" src="/img/New York (6 of 42).jpg" alt="">
-            <img class="land" src="/img/Sunset_luke (1 of 1).jpg" alt="" >
-            <img class="portrait" src="/img/New York (19 of 42).jpg" alt="">
-            <img class="portrait" id="maja" src="/img/Maja sunset vibes at the walk.jpg" alt="">  
-            <img class="land" src="/img/New York (24 of 42).jpg" alt="">
-            <img class="portrait" src="/img/Matth-parkering.jpg" alt="">
-            <img class="portrait" src="/img/Matth.jpg" alt="" >
-            <img class="portrait" src="/img/Skateboard sunset (1 of 1).jpg" alt=""> 
+        <a id=photographs><section id="photographs"> 
+            
+            <div class="grid_flex"> 
+            <img class="portrait" src="img/elias.jpg" alt="" >
+            <img class="portrait" src="img/ninsu_math.jpg" alt="">
+            <img class="portrait" src="img/New York (6 of 42).jpg" alt="">
+            <img class="land" src="img/Sunset_luke (1 of 1).jpg" alt="" >
+            <img class="portrait" src="img/New York (19 of 42).jpg" alt="">
+            <img class="portrait" id="maja" src="img/Maja sunset vibes at the walk.jpg" alt="">  
+            <img class="land" src="img/New York (24 of 42).jpg" alt="">
+            <img class="portrait" src="img/Matth-parkering.jpg" alt="">
+            <img class="portrait" src="img/Matth.jpg" alt="" >
+            <img class="portrait" src="img/Skateboard sunset (1 of 1).jpg" alt=""> 
         </div>
+        </a>
+
+        <a id="videos_page">
+            <section id="videographs"> 
+                <h2> VIDEOS </h2>
+                <div class="grid_flex" >
+                    <video id="moments_3" class="video" controls>
+                        <source src="misc/Moments_3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                    <video id="jumpyard" class="video_mobile" controls>
+                        <source src="misc/Jumpyard_2019_01_07.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                    <video id="gif" class="video_mobile" controls>
+                        <source src="misc/gif texture_1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                    <video id="moments_2" class="video" controls>
+                        <source src="misc/Moments. 2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                    <video id="simon" class="video" controls>
+                        <source src="misc/Simon Sampler of 19 v.2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
         </section>
+     </a>
+
+     <a id="creative_page">
+         <section id="creative">
+            <h2> CREATIVE </h2>
+            <div class="grid_flex_2" >
+                <img class="portrait" src="img/PicsArt_01-19-03.11.44.jpg" alt="">
+                <img class="portrait" src="img/PicsArt_10-15-01.53.47.jpg" alt="">
+                <img class="portrait" src="img/PicsArt_10-18-07.56.44.jpg" alt="">
+                <img class="portrait" src="img/PicsArt_01-29-06.41.30.jpg" alt="">
+            </div>
+         </section>
+     </a>
+    </section>
 
     </div>
     <script src="js/code.js"></script>
