@@ -6,7 +6,7 @@
   }
   
   function bringToFront() {
-    document.getElementById("overlay").style.zIndex = 1;
+    document.getElementById("overlay").style.zIndex = 0;
   }
 
   function myFunction() {
@@ -21,5 +21,7 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
 }
+
+
 
 

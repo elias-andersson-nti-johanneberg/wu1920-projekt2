@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Rye|Squada+One|Tomorrow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans:100,100i,400,400i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="jquery.mosaic.css" />
+    <title>masonry</title>
+</head>
+<body>
+    <div class="gridwrapper"> 
+        <div id="overlay" >
+            <video autoplay muted loop id="myvideo">
+            <source src="misc/TRY NOT TO DIE - S19 Collection.mp4" type="video/mp4">  </source>
+            </video> 
+            <div>
+                <h1>Zpetso </h1>
+                <h2> Photographer // Videographer // Freerunner // Creative</h2>
+                <button onclick="overlayoff(), bringToFront()"> </button>
+            </div>
+        </div>
+
+        <header> 
+            <div id="logo"> z</div>
+            <div id="name">
+                <h2>Zpetso</h2> 
+                <p>Elias Andersson</h3>
+                <p>Photographer // Videographer // Freerunner // Creative</h4>
+            </div>
+            <nav> 
+                <a class="visited" href="index.html">Home</a>
+                <a href="#videos_page">Videos</a>
+                <a href="#creative_page">Creative</a>
+                <a href="about_me.html">About me</a>
+                
+            </nav>
+        </header>
+      
+        <a id=photographs><section id="photographs"> 
+            <h2> PHOTOGRAPHS </h2>
+            <div id="myMosaic"> 
+            <img class="grid_item" src="img/elias.jpg" alt="" >
+            <img class="grid_item" src="img/ninsu_math.jpg" alt="">
+            <img class="grid_item" src="img/New York (6 of 42).jpg" alt="">
+            <img class="grid_item_width2" src="img/Sunset_luke (1 of 1).jpg" alt="" >
+            <img class="grid_item" src="img/New York (19 of 42).jpg" alt="">
+            <img class="grid_item" id="maja" src="img/Maja sunset vibes at the walk.jpg" alt="">  
+            <img class="grid_item_width2" src="img/New York (24 of 42).jpg" alt="">
+            <img class="grid_item" src="img/Matth-parkering.jpg" alt="">
+            <img class="grid_item" src="img/Matth.jpg" alt="" >
+            <img class="grid_item" src="img/Skateboard sunset (1 of 1).jpg" alt=""> 
+            <script>
+                $('#myMosaic').Mosaic();
+            </script>
+        </div>
+        </a>
+
+        <a id="videos_page">
+            <section id="videographs"> 
+                <h2> VIDEOS </h2>
+                <div class="grid_flex_v" >
+                    <video id="moments_3" class="video" controls>
+                        <source src="misc/Moments_3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+
+                    <video id="moments_2" class="video" controls>
+                        <source src="misc/Moments. 2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                    <video id="simon" class="video" controls>
+                        <source src="misc/Simon Sampler of 19 v.2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>  
+                  <video id="jumpyard" class="video_mobile" controls>
+                        <source src="misc/Jumpyard_2019_01_07.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                    <video id="gif" class="video_mobile" controls>
+                        <source src="misc/gif texture_1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
+        </section>
+     </a>
+
+     <a id="creative_page">
+         <section id="creative">
+            <h2> CREATIVE </h2>
+            <div class="grid_flex_2" >
+                <img class="grid_item" src="img/PicsArt_01-19-03.11.44.jpg" alt="">
+                <img class="grid_item" src="img/PicsArt_10-15-01.53.47.jpg" alt="">
+                <img class="grid_item" src="img/PicsArt_10-18-07.56.44.jpg" alt="">
+                <img class="grid_item" src="img/PicsArt_01-29-06.41.30.jpg" alt="">
+            </div>
+         </section>
+     </a>
+    </section>
+
+    </div>
+    <script src="js/code.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+
+</body>
+</html>
