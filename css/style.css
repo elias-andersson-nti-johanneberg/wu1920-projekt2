@@ -137,7 +137,7 @@ body {
 
 @media screen and (min-width: 992px) {
    body {
-        background-color:#373737;
+        background-color:#0c0c0cef;
         margin: 0;
         max-width: 100%;
     }
@@ -161,13 +161,19 @@ body {
       "ph"
       "ph"
       "ph"
+      "ph"
+      "ph"
+      "ph"
+      "ph"
+      "ph"
       "fo"
 
       ;
       grid-template-columns: 100vw;
-      grid-template-rows: repeat(17, 40vh);
+      grid-template-rows: repeat(22, 40vh);
       grid-gap: 1vh;
       margin: 0;
+      animation: fadein 3s
     }
 
     header{
@@ -255,8 +261,11 @@ body {
     grid-area: ph;
   }
 
-   section h2 {
-    grid-area: ph ;
+   section {
+     grid-area: ph ;
+   }
+   
+   .rubrik {
     font-family: 'IBM Plex Mono';
     margin:  0 15px;
     font-size: 2em;
@@ -287,6 +296,7 @@ body {
       .grid_flex_v_2 {
         padding: 1em;
         column-count:1;
+
         }
 
   .video {
@@ -299,6 +309,12 @@ body {
     width: 40%;
     margin-bottom: 1em;
     z-index: 4;
+    margin-right: 4em;
+    margin-left: 5em;
+  }
+
+  footer {
+    grid-area: fo;
   }
 
   #gridwrapper2 {
@@ -313,10 +329,23 @@ body {
     
   }
 
+  .fade_in {
+    animation: fadein 1s
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   article {
-    background-color: azure;
+    background-color: rgb(231, 231, 231);
     margin: 0 15px 15px 15px;
-    height: 70em;
+    height: 60em;
     z-index: 1;
     opacity: 100%;  
     display: flex;  
@@ -333,7 +362,7 @@ body {
   margin: 0%;
   text-align: center;
   font-weight: 400;
-  padding: 1em 0 0;
+  padding: 0.5em 0 0;
 }
 
 article img {
@@ -344,16 +373,17 @@ article img {
 article h3 {
 
   align-self: center;
-  margin: 0.2em;
+  margin: 0.1em;
   font-family:'IBM Plex Mono';
   font-weight: 5000;
   font-size: 1.5em;
 }
 
 article p {
-  padding: 5vh 30vw 0;
+  padding: 5vh 32vw 0;
   align-self: center;
   margin: 0.2em;
+  padding-left: 33vw;
   font-family:'IBM Plex Mono';
   font-weight: 100;
   font-size: 1em;
