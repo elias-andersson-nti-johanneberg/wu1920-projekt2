@@ -50,6 +50,40 @@ body {
     cursor: pointer;  
   }
 
+  .gridwrapper {
+    display: grid;
+    grid-template-areas: 
+    "he"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "fo"
+
+    ;
+    grid-template-columns: 100vw%;
+    grid-template-rows: repeat(21, 30vh);
+    grid-gap: 1vh;
+    margin: 0;
+    animation: fadein 3s
+  }
+
   header{
     background: linear-gradient( -45deg,#1082d0,#239ef0,#df8124, #b86511);
     background-size: 150%;
@@ -170,7 +204,7 @@ body {
 
       ;
       grid-template-columns: 100vw;
-      grid-template-rows: repeat(22, 40vh);
+      grid-template-rows: repeat(21, 40vh);
       grid-gap: 1vh;
       margin: 0;
       animation: fadein 3s
@@ -267,7 +301,7 @@ body {
    
    .rubrik {
     font-family: 'IBM Plex Mono';
-    margin:  0 15px;
+    margin:  0 0.49em ;
     font-size: 2em;
     font-weight: 100;
     letter-spacing: 2px;
@@ -315,7 +349,29 @@ body {
 
   footer {
     grid-area: fo;
+    display: flex;
+    justify-content: center;
+    
   }
+
+  footer p { 
+    font-family: 'IBM Plex Mono';
+    margin:  0.49em ;
+    padding: 0em 0.2em;
+    color: #dd7914;
+    width: fit-content;
+  }
+
+  #icons{
+    display: flex;
+    justify-items: ;
+    padding: 1em;
+  }
+
+    #insta{
+    width: 10vh;
+    align-self: flex-end;
+   }
 
   #gridwrapper2 {
     display: grid;
