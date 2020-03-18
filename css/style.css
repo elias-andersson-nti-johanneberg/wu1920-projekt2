@@ -31,9 +31,8 @@ html {
 
   #overlay div{
     position: fixed;
-    top: 40%;
+    top: 25%;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1;
     width: 25%;
     padding: 20px;
@@ -42,9 +41,50 @@ html {
 
   }
 
-  #overlay button{
-    cursor: pointer;  
+  #overlay h1{
+    text-shadow: 3px 6px black;
+    font-family: 'Bebas Neue', cursive;
+    color: orange;
+    font-size: 9em;
+    margin: 0%;
+    align-self: center;
+    justify-self: center;
+    font-weight: 400;
   }
+
+  #overlay h2{
+    text-shadow: 0.04em 0.08em black;
+    font-family: 'Bebas Neue', cursive;
+    color: #1082d0;
+    font-size: 2em;
+    margin: 0%;
+    align-self: center;
+    justify-self: center;
+    font-weight: 400;
+  }
+
+  #overlay button{
+    cursor: pointer; 
+    background-color: #1082d0 ;
+    border: none;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em; 
+    font-family: 'Bebas Neue', cursive; 
+    margin:1em;
+    text-shadow: 0.04em 0.08em black;
+    border-radius: 0.3em;
+    box-shadow: 0.2em 0.2em #999;
+  }
+
+  #overlay button:hover {background-color: #0b6eaf;
+        transform: translateY(0.2em);
+        transform: translateX(0.2em);
+        box-shadow: 0 0;
+      }
 
     body {
          background-color:#0c0c0cef;
@@ -96,6 +136,8 @@ html {
        margin: 15px;
        display: flex;
        z-index:2;
+       grid-area: he ;
+       min-height: 16em;
        }
  
      @keyframes change {
@@ -110,6 +152,7 @@ html {
        font-size: 5em;
        margin-left: 0.5em;
        margin-top: 0;
+       align-self: flex-start;
       
     
      }
@@ -152,6 +195,7 @@ html {
        flex: 1;
        margin: 1em 2em;
        display: flex;
+       flex-wrap: wrap;
        justify-content: space-evenly;
      }
  
@@ -161,6 +205,7 @@ html {
        text-decoration: none;
        color:black;
        letter-spacing: 2px;
+       padding: 0 0.5em;
        
      }
  
@@ -222,8 +267,9 @@ html {
      width: 40%;
      margin-bottom: 1em;
      z-index: 4;
-     margin-right: 4em;
+     margin-right: 5em;
      margin-left: 5em;
+    
    }
  
    footer {
@@ -252,19 +298,20 @@ html {
     }
  
    #gridwrapper2 {
-     display: grid;
      background-color:  #b86511;
+     grid-gap: 0;
+     margin: 0;
    }
  
-   #header_2{
+   #header2{
      margin: 15px 15px 0px 15px;
-     z-index: 2;
-     height: 271.5px;
+     height: 40vh;
      
    }
  
    .fade_in {
-     animation: fadein 1s
+     animation: fadein 1s;
+     grid-area: ph;
    }
  
    @keyframes fadein {
@@ -283,10 +330,11 @@ html {
      z-index: 1;
      opacity: 100%;  
      display: flex;  
-    justify-self: center;
-    align-self: center;
-   justify-items: center;
-   flex-direction: column;
+     justify-self: center;
+     align-self: center;
+     justify-items: center;
+     flex-direction: column;
+     
    }
  
    article h2{
@@ -325,23 +373,70 @@ html {
 
  @media screen and (max-width: 992px) {
   body {
-       background-color:#ac0505ef;
        margin: 0;
        max-width: 100%;
+  }
+
+  .gridwrapper {
+    grid-template-rows: repeat(20, 30vh);
+  }
+  
+
+  header {
+    min-height: 12em;
+  }
+
+  #logo{
+    font-size: 4em;
+    margin-left: 0.25em;
+    margin-top: 0;
+    flex: 1.5;
+  }
+
+
+  #name h2{
+    text-shadow: 3px 6px black;
+    font-size: 7em;
+    ;
+   
+  }
+
+  #name p{
+    font-size: 0.6em;
+    
+  }
+
+  .desktop {
+    margin: 1em 1em;
+    flex: 1.5;
+    letter-spacing: 1em;
+  }
+
+  .desktop a{
+    font-size: 1em;
+    padding: 0 0.1em;
+    
   }
 
   .grid_flex {
     column-count: 3 ;
     }
+
+  .grid_flex_v_2{
+    display: flex;
+    justify-content: space-evenly ;
+   }
+
+   .video_mobile {
+    margin: 1em 1em;
+  }
   
 
 }
 
  
  @media screen and (max-width: 768px) {
-  body {
-    background-color:#0c0c0cef;
-}
+
 
 #overlay {
   display: none;
@@ -398,13 +493,15 @@ html {
   header{
     margin: 1em;
     z-index:2;
+    min-height: 8em;
     }
 
 
   #logo{
-    font-size: 3.5em;
+    font-size: 3em;
     margin-left: 0.25em;
     margin-top: 0;
+    flex: 1;
   }
 
 
@@ -436,7 +533,7 @@ html {
     margin-right: 0.25em;
     text-align: right;
     padding:0;
-    vertical-align: top;
+    align-self: flex-start;
 }
 
 .sidepanel {
@@ -464,20 +561,56 @@ html {
   }
 
 .sidepanel .closebtn {
-   position: absolute;
-   top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 4em;
+  margin-left: 10vw;
 }
 
+.rubrik {
+  font-size: 1.5em;
+}
   .grid_flex {
     column-count: 1;
     }
-  
-  .grid_flex_v_2 {
 
+    .grid_flex_v_2{
+      display: block;
+     }
+
+    .video_mobile {
+      width: 100%;
+      margin: 1em 0;
     }
+    
+#header2 {
+  height: 30vh;
+}
+
+article {
+  height: 38em;
+  min-height: 40em;
+    }
+  
+  article h2{
+  font-size: 2em;
+  }
+  
+  article img {
+    width: 45vw;
+  } 
+  
+  article h3 {
+    font-size: 1em;
+  }
+  
+  article p {
+    margin: 0.2em;
+    font-size: 0.8em;
+    padding:5vw
+  }
+ 
 
  }
 
