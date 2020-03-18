@@ -17,12 +17,20 @@
             <p>Elias Andersson</h3>
             <p>Photographer // Videographer // Freerunner // Creative</h4>
         </div>
-        <nav> 
-            <a href="index.html">Home</a>
+        <button class="openbtn" onclick="openNav()">&#9776; </button>
+        <nav id="mySidepanel" class="sidepanel mobile">     
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
+            <a class="visited" href="index.html">Home</a>
             <a href="#videos_page">Videos</a>
             <a href="#creative_page">Creative</a>
-            <a class="visited" href="about_me.html">About me</a>
-            
+            <a href="about_me.html">About me</a>
+        </nav>
+
+        <nav class="desktop">     
+            <a class="visited" href="index.html">Home</a>
+            <a href="#videos_page">Videos</a>
+            <a href="#creative_page">Creative</a>
+            <a href="about_me.html">About me</a>
         </nav>
     </header>
 

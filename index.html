@@ -29,13 +29,25 @@
                 <p>Elias Andersson</h3>
                 <p>Photographer // Videographer // Freerunner // Creative</h4>
             </div>
-            <nav> 
+
+            <div id="nav_mobile"  class="mobile">
+                <button class="openbtn" onclick="openNav()">&#9776; </button>
+                <nav id="mySidepanel" class="sidepanel">     
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
+                    <a href="index.html">Home</a>
+                    <a href="#videos_page">Videos</a>
+                    <a href="#creative_page">Creative</a>
+                    <a href="about_me.html">About me</a>
+                </nav>
+            </div>
+
+            <nav class="desktop">     
                 <a class="visited" href="index.html">Home</a>
                 <a href="#videos_page">Videos</a>
                 <a href="#creative_page">Creative</a>
                 <a href="about_me.html">About me</a>
-                
             </nav>
+
         </header>
       
         <a id=photographs><section id="photographs"> 
