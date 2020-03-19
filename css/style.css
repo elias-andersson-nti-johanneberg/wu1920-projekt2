@@ -1,10 +1,12 @@
 html {
   scroll-behavior: smooth;
+  -ms-overflow-style: none;
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
+
 
   #overlay {
     position: fixed; /* Sit on top of the page content */
@@ -137,7 +139,7 @@ html {
        display: flex;
        z-index:2;
        grid-area: he ;
-       min-height: 16em;
+       min-height: 16vh;
        }
  
      @keyframes change {
@@ -201,7 +203,7 @@ html {
  
      .desktop a{
        font-family: 'Bebas Neue', cursive; 
-       font-size: 1.5em;
+       font-size: 1.3em;
        text-decoration: none;
        color:black;
        letter-spacing: 2px;
@@ -223,6 +225,26 @@ html {
       grid-area: ph ;
     }
     
+    #photograph {
+      width: 15vw;
+      width: min-content;
+    }
+
+    #videos_text {
+      width: 8vw;
+      width: min-content;
+    }
+
+    #creative_text {
+      width: 11vw;
+      width: min-content;
+    }
+
+    #contact {
+      width: 10vw;
+      width: min-content;
+    }
+
     .rubrik {
      font-family: 'IBM Plex Mono';
      margin:  0 0.49em ;
@@ -232,8 +254,10 @@ html {
      padding: 0em 0.2em;
      color: rgb(0, 0, 0);
      background-color: #dd7914;
-     width: fit-content;
+     width: min-content;
    }
+
+  
  
  
    .grid_flex {
@@ -252,23 +276,21 @@ html {
        
        }
        .grid_flex_v_2 {
-         padding: 1em;
-         column-count:1;
- 
+        display: flex; 
+        justify-content: space-evenly;
          }
  
    .video {
      width: 100%;
      margin-bottom: 1em;
-     z-index: 4;
+     z-index: 2;
    }
  
    .video_mobile {
      width: 40%;
      margin-bottom: 1em;
-     z-index: 4;
-     margin-right: 5em;
-     margin-left: 5em;
+     z-index: 2;
+     padding: 5vh;  
     
    }
  
@@ -276,7 +298,7 @@ html {
      grid-area: fo;
      display: flex;
      justify-content: center;
-     
+     z-index: 2;
    }
  
    footer p { 
@@ -287,14 +309,10 @@ html {
      width: fit-content;
    }
  
-   #icons{
-     display: flex;
-     padding: 1em;
-   }
- 
      #insta{
      width: 10vh;
      align-self: flex-end;
+     height: auto;
     }
  
    #gridwrapper2 {
@@ -383,7 +401,7 @@ html {
   
 
   header {
-    min-height: 12em;
+    min-height: 13vh;
   }
 
   #logo{
@@ -402,7 +420,7 @@ html {
   }
 
   #name p{
-    font-size: 0.6em;
+    font-size: 0.5em;
     
   }
 
@@ -421,11 +439,6 @@ html {
   .grid_flex {
     column-count: 3 ;
     }
-
-  .grid_flex_v_2{
-    display: flex;
-    justify-content: space-evenly ;
-   }
 
    .video_mobile {
     margin: 1em 1em;
@@ -493,7 +506,7 @@ html {
   header{
     margin: 1em;
     z-index:2;
-    min-height: 8em;
+    min-height: 6vh;
     }
 
 
