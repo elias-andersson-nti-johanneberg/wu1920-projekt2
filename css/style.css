@@ -243,6 +243,7 @@ html {
     #contact {
       width: 10vw;
       width: min-content;
+      margin:2vh;
     }
 
     .rubrik {
@@ -257,9 +258,6 @@ html {
      width: min-content;
    }
 
-  
- 
- 
    .grid_flex {
      padding: 1em;
      column-count: 4;
@@ -589,12 +587,14 @@ html {
     }
 
     .grid_flex_v_2{
-      display: block;
+      display: flex;
+      flex-direction: column;
      }
 
     .video_mobile {
-      width: 100%;
-      margin: 1em 0;
+      width: 80%;
+      margin: 0.5em 0;
+      align-self: center;
     }
     
 #header2 {
