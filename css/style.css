@@ -75,7 +75,7 @@ html {
     text-decoration: none;
     display: inline-block;
     font-size: 1.5em; 
-    font-family: 'Bebas Neue', cursive; 
+    font-family:'Bebas Neue', cursive; 
     margin:1em;
     text-shadow: 0.04em 0.08em black;
     border-radius: 0.3em;
@@ -122,10 +122,11 @@ html {
        "ph"
        "ph"
        "fo"
+       "fo"
  
        ;
        grid-template-columns: 100vw;
-       grid-template-rows: repeat(21, 40vh);
+       grid-template-rows: repeat(22, 40vh);
        grid-gap: 1vh;
        margin: 0;
        animation: fadein 3s
@@ -139,7 +140,7 @@ html {
        display: flex;
        z-index:2;
        grid-area: he ;
-       min-height: 16vh;
+       min-height: 16em;
        }
  
      @keyframes change {
@@ -217,15 +218,13 @@ html {
      }
  
  
-   #photographs {
-     grid-area: ph;
-   }
+
  
-    section {
+    #ph-grid{
       grid-area: ph ;
     }
     
-    #photograph {
+    #photograph_text {
       width: 15vw;
       width: min-content;
     }
@@ -296,7 +295,9 @@ html {
      grid-area: fo;
      display: flex;
      justify-content: center;
+     vertical-align: middle;
      z-index: 2;
+     align-self: center;
    }
  
    footer p { 
