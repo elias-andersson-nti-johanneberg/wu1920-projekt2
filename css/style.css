@@ -139,7 +139,7 @@ html {
        margin: 15px;
        display: flex;
        z-index:2;
-       grid-area: he ;
+       grid-area: he;
        min-height: 16em;
        }
  
@@ -217,9 +217,6 @@ html {
        text-shadow: 5px 1px black;
      }
  
- 
-
- 
     #ph-grid{
       grid-area: ph ;
     }
@@ -228,6 +225,56 @@ html {
       width: 15vw;
       width: min-content;
     }
+
+    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  padding-bottom: 2em;
+  width: 100%;
+  height: 34.5vw;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.card2 {
+  height: 28.5vw;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
 
     #videos_text {
       width: 8vw;
@@ -319,16 +366,32 @@ html {
      grid-gap: 0;
      margin: 0;
    }
- 
+
+  #gridwrapper2{ 
+  display: grid;
+  grid-template-areas: 
+  "he he"
+  "ar1 ar1"
+  "ar1 ar1"
+  "ar1 ar1"
+  "ar1 ar1"
+  "fo fo"
+  ;
+  grid-template-columns: repeat(2, 50vw);
+  grid-template-rows: repeat(6, 40vh);
+  grid-gap: 1vh;  
+  margin: 0;
+  animation: fadein 3s
+ }
+
    #header2{
      margin: 15px 15px 0px 15px;
-     height: 40vh;
-     
+     grid-area: he;
    }
  
    .fade_in {
      animation: fadein 1s;
-     grid-area: ph;
+     grid-area: ar1;
    }
  
    @keyframes fadein {
@@ -340,10 +403,10 @@ html {
      }
    }
  
-   article {
+   #ar1_about {
      background-color: rgb(231, 231, 231);
      margin: 0 15px 15px 15px;
-     height: 60em;
+     height: 120%;
      z-index: 1;
      opacity: 100%;  
      display: flex;  
@@ -351,10 +414,9 @@ html {
      align-self: center;
      justify-items: center;
      flex-direction: column;
-     
    }
  
-   article h2{
+   #ar1_about h2{
    font-family: 'Bebas Neue', cursive;
    color: orange;
    font-size: 3em;
@@ -364,12 +426,13 @@ html {
    padding: 0.5em 0 0;
  }
  
- article img {
+ #ar1_about #img_about {
    width: 20vw;
+   height: auto;
    align-self: center;
  } 
  
- article h3 {
+ #ar1_about h3 {
  
    align-self: center;
    margin: 0.1em;
@@ -378,7 +441,7 @@ html {
    font-size: 1.5em;
  }
  
- article p {
+ #ar1_about #about_txt {
    padding: 5vh 32vw 0;
    align-self: center;
    margin: 0.2em;
@@ -386,6 +449,36 @@ html {
    font-family:'IBM Plex Mono';
    font-weight: 100;
    font-size: 1em;
+ }
+
+ #ar2_about {
+  margin: 3em;
+  display: grid;
+  grid-template-areas: 
+  "img txt"
+  "img txt"
+  ;
+  grid-template-columns: repeat(2, 50vw);
+  grid-template-rows: repeat(2, 40vh);
+  grid-gap: 1vh;  
+  margin: 0;
+ }
+
+ #img_about_2 {
+   grid-area: img;
+   height: 94%;
+   width: auto;
+   justify-self: end;
+   margin: 2em;
+ }
+
+ #img_txt{
+   grid-area: txt;
+   font-family:'IBM Plex Mono';
+   font-weight: 100;
+   font-size: 1em;
+   padding:2em 25em 0 0;
+   
  }
 
  @media screen and (max-width: 992px) {
@@ -400,7 +493,7 @@ html {
   
 
   header {
-    min-height: 13vh;
+    min-height: 13vw;
   }
 
   #logo{
@@ -439,12 +532,16 @@ html {
     column-count: 3 ;
     }
 
+    .flip-card {
+      height: 45vw;
+    }
+
    .video_mobile {
     margin: 1em 1em;
   }
   
 
-}
+
 
  
  @media screen and (max-width: 768px) {
@@ -592,6 +689,14 @@ html {
       flex-direction: column;
      }
 
+     .flip-card {
+      height: 140vw;
+    }
+
+    .card2 {
+      height: 117vw;
+    }
+
     .video_mobile {
       width: 80%;
       margin: 0.5em 0;
@@ -602,24 +707,24 @@ html {
   height: 30vh;
 }
 
-article {
+#ar1_about {
   height: 38em;
   min-height: 40em;
     }
   
-  article h2{
+  #ar1_about h2{
   font-size: 2em;
   }
   
-  article img {
+  #ar1_about img {
     width: 45vw;
   } 
   
-  article h3 {
+  #ar1_about h3 {
     font-size: 1em;
   }
   
-  article p {
+  #ar1_about p {
     margin: 0.2em;
     font-size: 0.8em;
     padding:5vw
