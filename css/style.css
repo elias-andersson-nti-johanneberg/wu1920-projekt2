@@ -239,6 +239,10 @@ html {
   height: 28.5vw;
 }
 
+.card3 {
+  height:18vw;
+}
+
 /* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
@@ -371,14 +375,20 @@ html {
   display: grid;
   grid-template-areas: 
   "he he"
-  "ar1 ar1"
-  "ar1 ar1"
-  "ar1 ar1"
-  "ar1 ar1"
+  "he he"
+  "ar ar"
+  "ar ar"
+  "ar ar"
+  "ar ar"
+  "ar ar"
+  "ar2 ar2"
+  "ar2 ar2"
+  "ar2 ar2"
+  "ar2 ar2"
   "fo fo"
   ;
   grid-template-columns: repeat(2, 50vw);
-  grid-template-rows: repeat(6, 40vh);
+  grid-template-rows: repeat(14, 20vh);
   grid-gap: 1vh;  
   margin: 0;
   animation: fadein 3s
@@ -391,7 +401,8 @@ html {
  
    .fade_in {
      animation: fadein 1s;
-     grid-area: ar1;
+     grid-area: ar;
+     margin: 0 15px 15px 15px;
    }
  
    @keyframes fadein {
@@ -405,8 +416,8 @@ html {
  
    #ar1_about {
      background-color: rgb(231, 231, 231);
-     margin: 0 15px 15px 15px;
-     height: 120%;
+     margin: 0 15px;
+     min-height: 100%;
      z-index: 1;
      opacity: 100%;  
      display: flex;  
@@ -449,19 +460,23 @@ html {
    font-family:'IBM Plex Mono';
    font-weight: 100;
    font-size: 1em;
+   text-align: center;
  }
 
  #ar2_about {
-  margin: 3em;
+ grid-area: ar2;
+ margin: 0 15px;
   display: grid;
   grid-template-areas: 
   "img txt"
   "img txt"
+  "fo fo"
   ;
   grid-template-columns: repeat(2, 50vw);
-  grid-template-rows: repeat(2, 40vh);
+  grid-template-rows: repeat(3, 40vh);
   grid-gap: 1vh;  
-  margin: 0;
+  background-color: rgb(231, 231, 231); 
+  
  }
 
  #img_about_2 {
@@ -477,9 +492,11 @@ html {
    font-family:'IBM Plex Mono';
    font-weight: 100;
    font-size: 1em;
-   padding:2em 25em 0 0;
+   padding:2vw 20vw 0 0;
    
  }
+
+
 
  @media screen and (max-width: 992px) {
   body {
@@ -488,7 +505,39 @@ html {
   }
 
   .gridwrapper {
-    grid-template-rows: repeat(20, 30vh);
+    grid-template-areas: 
+    "he"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "ph"
+    "fo"
+    "fo"
+
+    ;
+    grid-template-rows: repeat(28, 42.5vh);
   }
   
 
@@ -529,21 +578,54 @@ html {
   }
 
   .grid_flex {
-    column-count: 3 ;
+    column-count: 2 ;
     }
 
     .flip-card {
-      height: 45vw;
+      height: 69vw;
+    }
+
+
+    .card2 {
+      height: 58vw;
     }
 
    .video_mobile {
     margin: 1em 1em;
   }
   
+    #ar1_about #about_txt {
+      padding: 5vh 28vw 0;
+      text-align: center;
+      font-size: 0.8em;
+    }
 
+    #img_txt {
+      font-size: 0.8em;
+      padding:2vw 20vw 0 0;
+    }
 
+    #img_about_2 {
+      height: 85%;
+    }
 
- 
+  #gridwrapper2{ 
+  
+  grid-template-areas: 
+  "he he"
+  "he he"
+  "ar ar"
+  "ar ar"
+  "ar ar"
+  "ar ar"
+  "ar2 ar2"
+  "ar2 ar2"
+  "ar2 ar2"
+  "ar2 ar2"
+  "fo fo"
+  ;
+  grid-template-rows: repeat(13, 20vh);
+ }
  @media screen and (max-width: 768px) {
 
 
@@ -593,10 +675,33 @@ html {
        "ph"
        "ph"
        "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
+       "ph"
        "fo"
  
        ;
-    grid-template-rows: repeat(31, 28vh);
+    grid-template-rows: repeat(54, 40vh);
   }
 
   header{
@@ -690,11 +795,11 @@ html {
      }
 
      .flip-card {
-      height: 140vw;
+      height: 137vw;
     }
 
     .card2 {
-      height: 117vw;
+      height: 114vw;
     }
 
     .video_mobile {
@@ -706,11 +811,6 @@ html {
 #header2 {
   height: 30vh;
 }
-
-#ar1_about {
-  height: 38em;
-  min-height: 40em;
-    }
   
   #ar1_about h2{
   font-size: 2em;
@@ -729,9 +829,55 @@ html {
     font-size: 0.8em;
     padding:5vw
   }
- 
 
+  #gridwrapper2 {
+  grid-template-areas: 
+  "he he"
+  "he he"
+  "ar ar"
+  "ar ar"
+  "ar ar"
+  "ar ar"
+  "ar2 ar2"
+  "ar2 ar2"
+  "ar2 ar2"
+
+  "fo fo"
+  ;
+  grid-template-rows: repeat(10, 15vh);
  }
 
+ #ar1_about #about_txt {
+  padding: 5vh 20vw 0;
+  text-align: center;
+  font-size: 0.6em;
+}
 
-  
+.fade_in {
+  margin: 0 ;
+}
+ 
+#ar2_about {
+  grid-template-areas: 
+  "img txt"
+  "img txt"
+  "img txt"
+  "img txt"
+  "fo fo"
+  ;
+  grid-template-columns: repeat(2, 50vw);
+  grid-template-rows: repeat(6, 10vh);
+}
+
+ #img_txt {
+  font-size: 0.5em;
+  padding:2vw 20vw 0 0;
+}
+
+#img_about_2 {
+  height: 90%;
+  justify-self: right;
+  margin-right: 0;
+}
+
+ }
